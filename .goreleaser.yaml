@@ -16,10 +16,10 @@ builds:
     ldflags:
       - '-s'
       - '-w'
-      - '-X github.com/nothub/mrpack-install/internal/buildinfo.version={{ .Version }}'
-      - '-X github.com/nothub/mrpack-install/internal/buildinfo.commit={{ .Commit }}'
-      - '-X github.com/nothub/mrpack-install/internal/buildinfo.date={{ .Date }}'
-      - '-X github.com/nothub/mrpack-install/internal/buildinfo.tool=goreleaser'
+      - '-X github.com/gamerboy80/mrpack-install/internal/buildinfo.version={{ .Version }}'
+      - '-X github.com/gamerboy80/mrpack-install/internal/buildinfo.commit={{ .Commit }}'
+      - '-X github.com/gamerboy80/mrpack-install/internal/buildinfo.date={{ .Date }}'
+      - '-X github.com/gamerboy80/mrpack-install/internal/buildinfo.tool=goreleaser'
     goos:
       - linux
       - darwin
@@ -54,7 +54,7 @@ nfpms:
     description: |-
       A cli application for installing
       Minecraft servers and Modrinth modpacks.
-    homepage: https://github.com/nothub/mrpack-install
+    homepage: https://github.com/gamerboy80/mrpack-install
     license: MIT
     formats:
       - apk
@@ -73,7 +73,7 @@ checksum:
 
 release:
   github:
-    owner: nothub
+    owner: gamerboy80
     name: mrpack-install
   name_template: 'v{{ .Version }}'
   header: 'Release generated at commit: {{ .ShortCommit }}'
